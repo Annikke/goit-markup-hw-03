@@ -83,7 +83,7 @@ body {
 .header {
     padding-top: 24px;
     padding-bottom: 25px;
-    border: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
 }
 
 .header-container {
@@ -309,18 +309,26 @@ address {
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
     padding-bottom: 94px;
 }
 
 .portfolio-item {
-    width: calc((100%-60px)/3);
+    flex-basis: calc((100% - 60px) / 3);
+    margin-right: 24px;
+    margin-bottom: 24px;
     border: 1px solid #EEEEEE;
 }
 
+.portfolio-item:nth-child(3n) {
+    margin-right: 0;
+    }
+
+.portfolio-item:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+}
+
 .portfolio-title {
-    margin-top: 20px;
-    margin-bottom: 4px;
+    margin: 20px 24px 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
@@ -328,6 +336,7 @@ address {
 }
 
 .portfolio-text {
+    margin: 0 24px 20px;
     font-size: 16px;
     line-height: 1.88;
     color: var(--primary-text-color);
