@@ -203,6 +203,11 @@ body {
 }
 
 /* about */
+
+.about {
+    padding-top: 0;
+}
+
 .abot-list {
     display: flex;
     justify-content: space-between;
